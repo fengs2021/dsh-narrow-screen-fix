@@ -1,0 +1,7 @@
+# dsh-narrow-screen-fix bundle patch: one host row (no-op).
+# The browser half is served through the package.json `dsh.client` declaration
+# (platform web, inject [], immediately true). No dsh source files are modified.
+- insert:
+    - id: narrow-screen-fix
+      name: dsh-narrow-screen-fix
+      config: {}
