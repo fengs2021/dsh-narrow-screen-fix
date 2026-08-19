@@ -1,7 +1,7 @@
 {
   "name": "dsh-narrow-screen-fix",
-  "version": "0.2.0",
-  "description": "Unified narrow-screen (mobile) CSS adaptation for the dsh web GUI, replacing dsh-question-footer-fix / dsh-composer-send-fix / dsh-nav-tabs-scroll-fix. Fixes: question card + plan review footer overflow, send-button inset, top tab bar horizontal scroll, settings panel mobile stacking, directory browser columns, ssh panel tab bar. All via client-side style override — no dsh sources touched. 中文：DSH 窄屏适配统一插件（纯 client 覆盖样式）。",
+  "version": "0.3.2",
+  "description": "Unified narrow-screen (mobile) CSS adaptation for the dsh web GUI, replacing dsh-question-footer-fix / dsh-composer-send-fix / dsh-nav-tabs-scroll-fix. Fixes: question card + plan review footer overflow, send-button inset, top tab bar horizontal scroll, settings panel mobile stacking, directory browser columns, ssh panel tab bar, **model select dropdown menu re-anchored to a bottom-sheet on phones** (iOS ActionSheet-style: position:fixed, full-width inside 8px gutter, max-height:65vh). Pure CSS — no JS path needed; earlier v0.3.0/0.3.1 included a JS reparent-to-body helper that broke the model's closeOutside/onBlur handlers (they gate on `rootRef.contains(target)`, and reparenting moved the menu out of root), which is why the second-level pane (model list / effort level) failed to open — clicks inside the now-detached menu were treated as outside-click and closed it. v0.3.2 removes the JS path entirely; pure CSS bottom-sheet is sufficient. All via client-side style override — no dsh sources touched. 中文：DSH 窄屏适配统一插件（纯 client 覆盖样式）。",
   "type": "module",
   "main": "lib/index.js",
   "exports": {
